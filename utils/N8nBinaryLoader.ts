@@ -1,19 +1,20 @@
 import { pipeline } from 'stream/promises';
 import { createWriteStream } from 'fs';
 import type { IExecuteFunctions, INodeExecutionData } from 'n8n-workflow';
-import { NodeOperationError, BINARY_ENCODING } from 'n8n-workflow';
+import { BINARY_ENCODING, NodeOperationError } from 'n8n-workflow';
 
 import type { TextSplitter } from 'langchain/text_splitter';
 import type { Document } from '@langchain/core/documents';
-import { CSVLoader } from 'langchain/document_loaders/fs/csv';
-import { DocxLoader } from 'langchain/document_loaders/fs/docx';
-import { JSONLoader } from 'langchain/document_loaders/fs/json';
-import { PDFLoader } from 'langchain/document_loaders/fs/pdf';
-import { TextLoader } from 'langchain/document_loaders/fs/text';
-import { EPubLoader } from 'langchain/document_loaders/fs/epub';
-import { file as tmpFile, type DirectoryResult } from 'tmp-promise';
+import { CSVLoader } from '@langchain/community/document_loaders/fs/csv';
+import { DocxLoader } from '@langchain/community/document_loaders/fs/docx';
+import { PDFLoader } from '@langchain/community/document_loaders/fs/pdf';
+import { EPubLoader } from '@langchain/community/document_loaders/fs/epub';
+
+import { type DirectoryResult, file as tmpFile } from 'tmp-promise';
 
 import { getMetadataFiltersValues } from './helpers';
+import { TextLoader } from 'langchain/document_loaders/fs/text';
+import { JSONLoader } from 'langchain/document_loaders/fs/json';
 
 const SUPPORTED_MIME_TYPES = {
 	auto: ['*/*'],

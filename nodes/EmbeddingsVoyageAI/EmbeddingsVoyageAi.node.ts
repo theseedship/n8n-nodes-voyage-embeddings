@@ -1,4 +1,3 @@
-/* eslint-disable n8n-nodes-base/node-dirname-against-convention */
 import {
 	NodeConnectionType,
 	type IExecuteFunctions,
@@ -41,7 +40,7 @@ export class EmbeddingsVoyageAi implements INodeType {
 				name: 'model',
 				type: 'string',
 				default: 'voyage-large-2-instruct',
-				description: 'The model to use for generating embeddings'
+				description: 'The model to use for generating embeddings',
 			},
 			{
 				displayName: 'Input Type',

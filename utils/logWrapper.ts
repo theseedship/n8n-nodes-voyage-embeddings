@@ -14,7 +14,7 @@ import { TextSplitter } from 'langchain/text_splitter';
 import { BaseChatMemory } from '@langchain/community/memory/chat_memory';
 import { BaseRetriever } from '@langchain/core/retrievers';
 import { BaseOutputParser, OutputParserException } from '@langchain/core/output_parsers';
-import type { BaseDocumentLoader } from 'langchain/dist/document_loaders/base';
+import { BaseDocumentLoader } from '@langchain/core/document_loaders/base';
 import { N8nJsonLoader } from './N8nJsonLoader';
 import { N8nBinaryLoader } from './N8nBinaryLoader';
 import { logAiEvent } from './helpers';

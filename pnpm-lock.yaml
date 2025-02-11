@@ -20,6 +20,9 @@ importers:
       n8n-workflow:
         specifier: '*'
         version: 1.48.0
+      tmp-promise:
+        specifier: ^3.0.3
+        version: 3.0.3
     devDependencies:
       '@typescript-eslint/parser':
         specifier: ^7.15.0
@@ -2561,6 +2564,13 @@ packages:
 
   title-case@3.0.3:
     resolution: {integrity: sha512-e1zGYRvbffpcHIrnuqT0Dh+gEJtDaxDSoG4JAIpq4oDFyooziLBIiYQv0GBT4FUAnUop5uZ1hiIAj7oAF6sOCA==}
+
+  tmp-promise@3.0.3:
+    resolution: {integrity: sha512-RwM7MoPojPxsOBYnyd2hy0bxtIlVrihNs9pj5SUvY8Zz1sQcQG2tG1hSr8PDxfgEB8RNKDhqbIlroIarSNDNsQ==}
+
+  tmp@0.2.3:
+    resolution: {integrity: sha512-nZD7m9iCPC5g0pYmcaxogYKggSfLsdxl8of3Q/oIbqCqLLIO9IAF0GWjX1z9NZRHPiXv8Wex4yDCaZsgEw0Y8w==}
+    engines: {node: '>=14.14'}
 
   to-absolute-glob@2.0.2:
     resolution: {integrity: sha512-rtwLUQEwT8ZeKQbyFJyomBRYXyE16U5VKuy0ftxLMK/PZb2fkOsg5r9kHdauuVDbsNdIBoC/HCthpidamQFXYA==}
@@ -5274,6 +5284,12 @@ snapshots:
   title-case@3.0.3:
     dependencies:
       tslib: 2.6.3
+
+  tmp-promise@3.0.3:
+    dependencies:
+      tmp: 0.2.3
+
+  tmp@0.2.3: {}
 
   to-absolute-glob@2.0.2:
     dependencies:
